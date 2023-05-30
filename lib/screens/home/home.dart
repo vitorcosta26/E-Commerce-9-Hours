@@ -129,7 +129,7 @@ class _HomeState extends State<Home> {
                                         child: SizedBox(
                                           height: 100,
                                           width: 100,
-                                          child: Image.network(e.image),
+                                          child: Text(e.description),
                                         ),
                                       ),
                                     ),
@@ -179,7 +179,9 @@ class _HomeState extends State<Home> {
                                         searchList[index];
                                     return Container(
                                       decoration: BoxDecoration(
-                                        color: Theme.of(context).primaryColor.withOpacity(0.3),
+                                        color: Theme.of(context)
+                                            .primaryColor
+                                            .withOpacity(0.3),
                                         borderRadius:
                                             BorderRadius.circular(8.0),
                                       ),
@@ -252,7 +254,9 @@ class _HomeState extends State<Home> {
                                             productModelList[index];
                                         return Container(
                                           decoration: BoxDecoration(
-                                            color:Theme.of(context).primaryColor.withOpacity(0.3),
+                                            color: Theme.of(context)
+                                                .primaryColor
+                                                .withOpacity(0.3),
                                             borderRadius:
                                                 BorderRadius.circular(8.0),
                                           ),

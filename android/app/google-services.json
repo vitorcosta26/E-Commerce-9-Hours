@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "854804288375",
+    "project_id": "vivastore-6645c",
+    "storage_bucket": "vivastore-6645c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:854804288375:android:f8a94a59cfaaed091cc772",
+        "android_client_info": {
+          "package_name": "com.example.viva_store"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKuGHWliT0zntJPtdi651SBMrl__cnSaM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:854804288375:android:914b56726aeaff151cc772",
+        "android_client_info": {
+          "package_name": "com.example.youtube_ecommerce"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKuGHWliT0zntJPtdi651SBMrl__cnSaM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

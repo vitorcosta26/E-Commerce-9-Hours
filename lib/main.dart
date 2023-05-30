@@ -1,6 +1,5 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_stripe/flutter_stripe.dart';
 import 'package:provider/provider.dart';
 import 'package:youtube_ecommerce/constants/theme.dart';
 import 'package:youtube_ecommerce/firebase_helper/firebase_auth_helper/firebase_auth_helper.dart';
@@ -11,10 +10,9 @@ import 'package:youtube_ecommerce/screens/custom_bottom_bar/custom_bottom_bar.da
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-   Stripe.publishableKey =
-  "pk_test_51MWx8OAVMyklfe3CsjEzA1CiiY0XBTlHYbZ8jQlGtVFIwQi4aNeGv8J1HUw4rgSavMTLzTwgn0XRlwoTVRFXyu2h00mRUeWmAf";
+  //Stripe.publishableKey = "pk_test_51MWx8OAVMyklfe3CsjEzA1CiiY0XBTlHYbZ8jQlGtVFIwQi4aNeGv8J1HUw4rgSavMTLzTwgn0XRlwoTVRFXyu2h00mRUeWmAf";
   await Firebase.initializeApp(
-    options: DefaultFirebaseConfig.platformOptions,
+    options: DefaultFirebaseOptions.currentPlatform,
   );
 
   runApp(const MyApp());

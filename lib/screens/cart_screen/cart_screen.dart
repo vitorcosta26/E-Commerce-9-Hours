@@ -40,7 +40,7 @@ class _CartScreenState extends State<CartScreen> {
                     ),
                   ),
                   Text(
-                    "\$${appProvider.totalPrice().toString()}",
+                    "R\$${appProvider.totalPrice().toString()}",
                     style: const TextStyle(
                       fontSize: 18.0,
                       fontWeight: FontWeight.bold,
@@ -52,13 +52,13 @@ class _CartScreenState extends State<CartScreen> {
                 height: 24.0,
               ),
               PrimaryButton(
-                title: "Checkout",
+                title: "COMPRAR",
                 onPressed: () {
                   appProvider.clearBuyProduct();
                   appProvider.addBuyProductCartList();
                   appProvider.clearCart();
                   if (appProvider.getBuyProductList.isEmpty) {
-                    showMessage("Cart is empty");
+                    showMessage("O carrinho está vazio");
                   } else {
                     Routes.instance.push(
                         widget: const CartItemCheckout(), context: context);
@@ -73,7 +73,7 @@ class _CartScreenState extends State<CartScreen> {
         centerTitle: true,
         // backgroundColor: Colo,
         title: const Text(
-          "Cart Screen",
+          "Carrinho",
           style: TextStyle(
             color: Colors.black,
           ),
@@ -81,7 +81,7 @@ class _CartScreenState extends State<CartScreen> {
       ),
       body: appProvider.getCartProductList.isEmpty
           ? const Center(
-              child: Text("Empty"),
+              child: Text("Vazio"),
             )
           : ListView.builder(
               itemCount: appProvider.getCartProductList.length,

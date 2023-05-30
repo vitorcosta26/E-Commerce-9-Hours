@@ -67,7 +67,7 @@ class _CartItemCheckoutState extends State<CartItemCheckout> {
                     width: 12.0,
                   ),
                   const Text(
-                    "Cash on Delivery",
+                    "Transferência",
                     style: TextStyle(
                       fontSize: 18.0,
                       fontWeight: FontWeight.bold,
@@ -102,7 +102,7 @@ class _CartItemCheckoutState extends State<CartItemCheckout> {
                     width: 12.0,
                   ),
                   const Text(
-                    "Pay Online",
+                    "Cartão de credito",
                     style: TextStyle(
                       fontSize: 18.0,
                       fontWeight: FontWeight.bold,
@@ -115,14 +115,14 @@ class _CartItemCheckoutState extends State<CartItemCheckout> {
               height: 24.0,
             ),
             PrimaryButton(
-              title: "Continues",
+              title: "Continuar",
               onPressed: () async {
                 if (groupValue == 1) {
                   bool value = await FirebaseFirestoreHelper.instance
                       .uploadOrderedProductFirebase(
                           appProvider.getBuyProductList,
                           context,
-                          "Cash on delivery");
+                          "Transferência");
 
                   appProvider.clearBuyProduct();
                   if (value) {
@@ -132,7 +132,6 @@ class _CartItemCheckoutState extends State<CartItemCheckout> {
                     });
                   }
                 } else {
-                 
                   int value = double.parse(
                           appProvider.totalPriceBuyProductList().toString())
                       .round()

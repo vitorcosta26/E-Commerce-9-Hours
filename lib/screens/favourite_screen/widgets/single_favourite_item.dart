@@ -65,12 +65,12 @@ class _SingleFavouriteItemState extends State<SingleFavouriteItem> {
                                 AppProvider appProvider =
                                     Provider.of<AppProvider>(context,
                                         listen: false);
-                                appProvider
-                                    .removeFavouriteProduct(widget.singleProduct);
-                                showMessage("Removed to wishlist");
+                                appProvider.removeFavouriteProduct(
+                                    widget.singleProduct);
+                                showMessage("Remover dos favoritos");
                               },
                               child: const Text(
-                                "Remove to wishlist",
+                                "Remover dos favoritos",
                                 style: TextStyle(
                                   fontSize: 12.0,
                                   fontWeight: FontWeight.bold,
@@ -80,7 +80,7 @@ class _SingleFavouriteItemState extends State<SingleFavouriteItem> {
                           ],
                         ),
                         Text(
-                          "\$${widget.singleProduct.price.toString()}",
+                          "R\$${widget.singleProduct.price.toString()}",
                           style: const TextStyle(
                             fontSize: 18.0,
                             fontWeight: FontWeight.bold,

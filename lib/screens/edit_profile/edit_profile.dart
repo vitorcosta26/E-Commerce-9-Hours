@@ -38,7 +38,7 @@ class _EditProfileState extends State<EditProfile> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         title: const Text(
-          "Profile",
+          "Conta",
           style: TextStyle(
             color: Colors.black,
           ),
@@ -77,12 +77,11 @@ class _EditProfileState extends State<EditProfile> {
             height: 24.0,
           ),
           PrimaryButton(
-            title: "Update",
+            title: "Atualizar",
             onPressed: () async {
               UserModel userModel = appProvider.getUserInformation
                   .copyWith(name: textEditingController.text);
               appProvider.updateUserInfoFirebase(context, userModel, image);
-            
             },
           ),
         ],

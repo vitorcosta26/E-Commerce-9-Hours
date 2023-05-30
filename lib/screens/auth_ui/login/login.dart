@@ -33,7 +33,7 @@ class _LoginState extends State<Login> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const TopTitles(
-                  subtitle: "Welcome Back To E Commerce App", title: "Login"),
+                  subtitle: "Bem-vindo de volta a Viva Store", title: "Login"),
               const SizedBox(
                 height: 46.0,
               ),
@@ -53,7 +53,7 @@ class _LoginState extends State<Login> {
                 controller: password,
                 obscureText: isShowPassword,
                 decoration: InputDecoration(
-                  hintText: "Password",
+                  hintText: "Senha",
                   prefixIcon: const Icon(
                     Icons.password_sharp,
                   ),
@@ -64,7 +64,7 @@ class _LoginState extends State<Login> {
                         });
                       },
                       padding: EdgeInsets.zero,
-                      child:  Icon(
+                      child: Icon(
                         isShowPassword
                             ? Icons.visibility
                             : Icons.visibility_off,
@@ -92,7 +92,7 @@ class _LoginState extends State<Login> {
               const SizedBox(
                 height: 24.0,
               ),
-              const Center(child: Text("Don't have an account?")),
+              const Center(child: Text("Não tem uma conta?")),
               const SizedBox(
                 height: 12.0,
               ),
@@ -103,7 +103,7 @@ class _LoginState extends State<Login> {
                         .push(widget: const SignUp(), context: context);
                   },
                   child: Text(
-                    "Create an account",
+                    "Criar uma conta",
                     style: TextStyle(color: Theme.of(context).primaryColor),
                   ),
                 ),

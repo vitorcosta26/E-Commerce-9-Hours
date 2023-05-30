@@ -23,9 +23,15 @@ class DefaultFirebaseOptions {
       case TargetPlatform.android:
         return android;
       case TargetPlatform.iOS:
-        return ios;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for ios - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.macOS:
-        return macos;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for macos - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
@@ -45,37 +51,19 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions web = FirebaseOptions(
     apiKey: 'AIzaSyCb5Iyz0gpYzO2bbf-TIPf0qgWeDv6tC0Q',
-    appId: '1:854804288375:web:d90d78eed4ad59ee1cc772',
+    appId: '1:854804288375:web:68f7eb6b850f42a61cc772',
     messagingSenderId: '854804288375',
     projectId: 'vivastore-6645c',
     authDomain: 'vivastore-6645c.firebaseapp.com',
     storageBucket: 'vivastore-6645c.appspot.com',
-    measurementId: 'G-Z2B94P3JRP',
+    measurementId: 'G-5TKYFNGNQS',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyAKuGHWliT0zntJPtdi651SBMrl__cnSaM',
-    appId: '1:854804288375:android:914b56726aeaff151cc772',
+    appId: '1:854804288375:android:6c0ac60151905d471cc772',
     messagingSenderId: '854804288375',
     projectId: 'vivastore-6645c',
     storageBucket: 'vivastore-6645c.appspot.com',
-  );
-
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyD37m2C_7Ee4FQm7juJfbm6QsdiKMsqdmw',
-    appId: '1:854804288375:ios:705d8d86602a77141cc772',
-    messagingSenderId: '854804288375',
-    projectId: 'vivastore-6645c',
-    storageBucket: 'vivastore-6645c.appspot.com',
-    iosBundleId: 'com.example.youtubeEcommerce',
-  );
-
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyD37m2C_7Ee4FQm7juJfbm6QsdiKMsqdmw',
-    appId: '1:854804288375:ios:705d8d86602a77141cc772',
-    messagingSenderId: '854804288375',
-    projectId: 'vivastore-6645c',
-    storageBucket: 'vivastore-6645c.appspot.com',
-    iosBundleId: 'com.example.youtubeEcommerce',
   );
 }

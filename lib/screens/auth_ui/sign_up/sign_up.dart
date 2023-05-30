@@ -19,9 +19,9 @@ class SignUp extends StatefulWidget {
 
 class _SignUpState extends State<SignUp> {
   bool isShowPassword = true;
-   TextEditingController password = TextEditingController();
+  TextEditingController password = TextEditingController();
   TextEditingController email = TextEditingController();
- 
+
   TextEditingController name = TextEditingController();
   TextEditingController phone = TextEditingController();
   @override
@@ -34,15 +34,15 @@ class _SignUpState extends State<SignUp> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const TopTitles(
-                  subtitle: "Welcome Back To E Commerce App",
-                  title: "Create Account"),
+                  subtitle: "Bem-vindo de volta a Viva Store",
+                  title: "Criar uma conta"),
               const SizedBox(
                 height: 46.0,
               ),
               TextFormField(
                 controller: name,
                 decoration: const InputDecoration(
-                  hintText: "Name",
+                  hintText: "Nome",
                   prefixIcon: Icon(
                     Icons.person_outline,
                   ),
@@ -68,7 +68,7 @@ class _SignUpState extends State<SignUp> {
                 controller: phone,
                 keyboardType: TextInputType.phone,
                 decoration: const InputDecoration(
-                  hintText: "Phone",
+                  hintText: "Telefone",
                   prefixIcon: Icon(
                     Icons.phone_outlined,
                   ),
@@ -81,7 +81,7 @@ class _SignUpState extends State<SignUp> {
                 controller: password,
                 obscureText: isShowPassword,
                 decoration: InputDecoration(
-                  hintText: "Password",
+                  hintText: "Senha",
                   prefixIcon: const Icon(
                     Icons.password_sharp,
                   ),
@@ -102,7 +102,7 @@ class _SignUpState extends State<SignUp> {
                 height: 36.0,
               ),
               PrimaryButton(
-                title: "Create an account",
+                title: "Criar conta",
                 onPressed: () async {
                   bool isVaildated = signUpVaildation(
                       email.text, password.text, name.text, phone.text);
@@ -119,7 +119,7 @@ class _SignUpState extends State<SignUp> {
               const SizedBox(
                 height: 24.0,
               ),
-              const Center(child: Text("I have already an account?")),
+              const Center(child: Text("Já possui cadastro?")),
               const SizedBox(
                 height: 12.0,
               ),

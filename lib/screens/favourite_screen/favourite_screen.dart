@@ -17,7 +17,7 @@ class FavouriteScreen extends StatelessWidget {
       appBar: AppBar(
         // backgroundColor: Colo,
         title: const Text(
-          "Favourite Screen",
+          "Favoritos",
           style: TextStyle(
             color: Colors.black,
           ),
@@ -25,7 +25,7 @@ class FavouriteScreen extends StatelessWidget {
       ),
       body: appProvider.getFavouriteProductList.isEmpty
           ? const Center(
-              child: Text("Empty"),
+              child: Text("Sem favoritos"),
             )
           : ListView.builder(
               itemCount: appProvider.getFavouriteProductList.length,

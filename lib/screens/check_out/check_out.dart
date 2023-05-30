@@ -65,7 +65,7 @@ class _CheckoutState extends State<Checkout> {
                     width: 12.0,
                   ),
                   const Text(
-                    "Cash on Delivery",
+                    "Transferência",
                     style: TextStyle(
                       fontSize: 18.0,
                       fontWeight: FontWeight.bold,
@@ -100,7 +100,7 @@ class _CheckoutState extends State<Checkout> {
                     width: 12.0,
                   ),
                   const Text(
-                    "Pay Online",
+                    "Cartão de credito",
                     style: TextStyle(
                       fontSize: 18.0,
                       fontWeight: FontWeight.bold,
@@ -113,7 +113,7 @@ class _CheckoutState extends State<Checkout> {
               height: 24.0,
             ),
             PrimaryButton(
-              title: "Continues",
+              title: "Continuar",
               onPressed: () async {
                 appProvider.clearBuyProduct();
                 appProvider.addBuyProduct(widget.singleProduct);
@@ -123,8 +123,7 @@ class _CheckoutState extends State<Checkout> {
                       .uploadOrderedProductFirebase(
                           appProvider.getBuyProductList,
                           context,
-                          "Cash on delivery");
-
+                          "Transferência");
                   appProvider.clearBuyProduct();
                   if (value) {
                     Future.delayed(const Duration(seconds: 2), () {
@@ -133,7 +132,6 @@ class _CheckoutState extends State<Checkout> {
                     });
                   }
                 } else {
-                 
                   int value = double.parse(
                           appProvider.totalPriceBuyProductList().toString())
                       .round()

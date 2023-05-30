@@ -41,7 +41,7 @@ class _SingleCartItemState extends State<SingleCartItem> {
           Expanded(
             child: Container(
               height: 140,
-              color:Theme.of(context).primaryColor.withOpacity(0.5),
+              color: Theme.of(context).primaryColor.withOpacity(0.5),
               child: Image.network(
                 widget.singleProduct.image,
               ),
@@ -119,18 +119,18 @@ class _SingleCartItemState extends State<SingleCartItem> {
                                     .contains(widget.singleProduct)) {
                                   appProvider.addFavouriteProduct(
                                       widget.singleProduct);
-                                  showMessage("Added to wishlist");
+                                  showMessage("Adicionar aos favoritos");
                                 } else {
                                   appProvider.removeFavouriteProduct(
                                       widget.singleProduct);
-                                  showMessage("Removed to wishlist");
+                                  showMessage("Remover dos favoritos");
                                 }
                               },
                               child: Text(
                                 appProvider.getFavouriteProductList
                                         .contains(widget.singleProduct)
-                                    ? "Remove to wishlist"
-                                    : "Add to wishlist",
+                                    ? "Remover dos favoritos"
+                                    : "Adicionar aos favoritos",
                                 style: const TextStyle(
                                   fontSize: 12.0,
                                   fontWeight: FontWeight.bold,
@@ -140,7 +140,7 @@ class _SingleCartItemState extends State<SingleCartItem> {
                           ],
                         ),
                         Text(
-                          "\$${widget.singleProduct.price.toString()}",
+                          "R\$${widget.singleProduct.price.toString()}",
                           style: const TextStyle(
                             fontSize: 18.0,
                             fontWeight: FontWeight.bold,
@@ -152,7 +152,7 @@ class _SingleCartItemState extends State<SingleCartItem> {
                         padding: EdgeInsets.zero,
                         onPressed: () {
                           appProvider.removeCartProduct(widget.singleProduct);
-                          showMessage("Removed from Cart");
+                          showMessage("Remover");
                         },
                         child: const CircleAvatar(
                           maxRadius: 13,

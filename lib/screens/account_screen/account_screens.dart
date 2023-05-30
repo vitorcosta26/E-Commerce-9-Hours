@@ -29,7 +29,7 @@ class _AccountScreenState extends State<AccountScreen> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         title: const Text(
-          "Account",
+          "Minha conta",
           style: TextStyle(
             color: Colors.black,
           ),
@@ -66,7 +66,7 @@ class _AccountScreenState extends State<AccountScreen> {
                 SizedBox(
                   width: 130,
                   child: PrimaryButton(
-                    title: "Edit Profile",
+                    title: "Editar informações",
                     onPressed: () {
                       Routes.instance
                           .push(widget: const EditProfile(), context: context);
@@ -86,7 +86,7 @@ class _AccountScreenState extends State<AccountScreen> {
                         .push(widget: const OrderScreen(), context: context);
                   },
                   leading: const Icon(Icons.shopping_bag_outlined),
-                  title: const Text("Your Orders"),
+                  title: const Text("Meus pedidos"),
                 ),
                 ListTile(
                   onTap: () {
@@ -94,7 +94,7 @@ class _AccountScreenState extends State<AccountScreen> {
                         widget: const FavouriteScreen(), context: context);
                   },
                   leading: const Icon(Icons.favorite_outline),
-                  title: const Text("Favourite"),
+                  title: const Text("Favoritos"),
                 ),
                 ListTile(
                   onTap: () {
@@ -102,7 +102,7 @@ class _AccountScreenState extends State<AccountScreen> {
                         .push(widget: const AboutUs(), context: context);
                   },
                   leading: const Icon(Icons.info_outline),
-                  title: const Text("About us"),
+                  title: const Text("Sobre nós"),
                 ),
                 ListTile(
                   onTap: () {
@@ -110,7 +110,7 @@ class _AccountScreenState extends State<AccountScreen> {
                         .push(widget: const ChangePassword(), context: context);
                   },
                   leading: const Icon(Icons.change_circle_outlined),
-                  title: const Text("Change Password"),
+                  title: const Text("Alterar senha"),
                 ),
                 ListTile(
                   onTap: () {
@@ -124,7 +124,7 @@ class _AccountScreenState extends State<AccountScreen> {
                 const SizedBox(
                   height: 12.0,
                 ),
-                const Text("Version 1.0.0")
+                const Text("Version 0.0.1")
               ],
             ),
           ),

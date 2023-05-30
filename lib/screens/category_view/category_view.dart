@@ -52,7 +52,7 @@ class _CategoryViewState extends State<CategoryView> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const SizedBox(height: kToolbarHeight*1),
+                  const SizedBox(height: kToolbarHeight * 1),
                   Padding(
                     padding: const EdgeInsets.all(12.0),
                     child: Row(
@@ -70,7 +70,7 @@ class _CategoryViewState extends State<CategoryView> {
                   ),
                   productModelList.isEmpty
                       ? const Center(
-                          child: Text("Best Product is empty"),
+                          child: Text("Sem recomendações"),
                         )
                       : Padding(
                           padding: const EdgeInsets.all(12.0),
@@ -90,7 +90,9 @@ class _CategoryViewState extends State<CategoryView> {
                                     productModelList[index];
                                 return Container(
                                   decoration: BoxDecoration(
-                                    color: Theme.of(context).primaryColor.withOpacity(0.3),
+                                    color: Theme.of(context)
+                                        .primaryColor
+                                        .withOpacity(0.3),
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
                                   child: Column(
@@ -113,7 +115,7 @@ class _CategoryViewState extends State<CategoryView> {
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
-                                      Text("Price: \$${singleProduct.price}"),
+                                      Text("Preço: R\$${singleProduct.price}"),
                                       const SizedBox(
                                         height: 30.0,
                                       ),
@@ -129,7 +131,7 @@ class _CategoryViewState extends State<CategoryView> {
                                                 context: context);
                                           },
                                           child: const Text(
-                                            "Buy",
+                                            "Comprar",
                                           ),
                                         ),
                                       ),

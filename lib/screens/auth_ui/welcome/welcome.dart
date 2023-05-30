@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:youtube_ecommerce/constants/asset_images.dart';
 import 'package:youtube_ecommerce/constants/routes.dart';
 import 'package:youtube_ecommerce/screens/auth_ui/login/login.dart';
 import 'package:youtube_ecommerce/widgets/primary_button/primary_button.dart';
@@ -19,40 +18,8 @@ class Welcome extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const TopTitles(
-                subtitle: "Buy AnyItems From Using App ", title: "Welcome"),
-            Center(
-              child: Image.asset(
-                AssetsImages.instance.welcomeImage,
-              ),
-            ),
-            // Row(
-            //   mainAxisAlignment: MainAxisAlignment.center,
-            //   children: [
-            //     CupertinoButton(
-            //       onPressed: () {},
-            //       padding: EdgeInsets.zero,
-            //       child: const Icon(
-            //         Icons.facebook,
-            //         size: 35,
-            //         color: Colors.blue,
-            //       ),
-            //     ),
-            //     const SizedBox(
-            //       width: 12.0,
-            //     ),
-            //     CupertinoButton(
-            //       onPressed: () {},
-            //       padding: EdgeInsets.zero,
-            //       child: Image.asset(
-            //         AssetsImages.instance.googleLogo,
-            //         scale: 30.0,
-            //       ),
-            //     ),
-            //   ],
-            // ),
-            const SizedBox(
-              height: 30.0,
-            ),
+                subtitle: "Vamos aproveitar as ofertas?", title: "Viva Store"),
+            const Spacer(),
             PrimaryButton(
               title: "Login",
               onPressed: () {
@@ -63,7 +30,7 @@ class Welcome extends StatelessWidget {
               height: 18.0,
             ),
             PrimaryButton(
-              title: "Sign Up",
+              title: "Cadastrar",
               onPressed: () {
                 Routes.instance.push(widget: const SignUp(), context: context);
               },

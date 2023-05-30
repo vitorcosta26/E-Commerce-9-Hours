@@ -23,7 +23,7 @@ class _ChangePasswordState extends State<ChangePassword> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         title: const Text(
-          "Change Password",
+          "Mudar senha",
           style: TextStyle(
             color: Colors.black,
           ),
@@ -36,7 +36,7 @@ class _ChangePasswordState extends State<ChangePassword> {
             controller: newpassword,
             obscureText: isShowPassword,
             decoration: InputDecoration(
-              hintText: "New Password",
+              hintText: "Nova senha",
               prefixIcon: const Icon(
                 Icons.password_sharp,
               ),
@@ -60,28 +60,27 @@ class _ChangePasswordState extends State<ChangePassword> {
             controller: confirmpassword,
             obscureText: isShowPassword,
             decoration: const InputDecoration(
-              hintText: "Confrim Password",
+              hintText: "Confirmar senha",
               prefixIcon: Icon(
                 Icons.password_sharp,
               ),
-             
             ),
           ),
           const SizedBox(
             height: 36.0,
           ),
           PrimaryButton(
-            title: "Update",
+            title: "Atualizar",
             onPressed: () async {
               if (newpassword.text.isEmpty) {
-                showMessage("New Password is empty");
+                showMessage("Nova senha está vazia");
               } else if (confirmpassword.text.isEmpty) {
-                showMessage("Confirm Password is empty");
+                showMessage("Confirmar senha está vazio");
               } else if (confirmpassword.text == newpassword.text) {
                 FirebaseAuthHelper.instance
                     .changePassword(newpassword.text, context);
               } else {
-                showMessage("Confrim Password is not match");
+                showMessage("As senhas não coincidem");
               }
             },
           ),
